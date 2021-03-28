@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        논리연산자
+        ||: or 연산자라 부르며, 피연산자 중 값이 하나라도 true가 존재하면 true로 결괏값을 반환합니다.
+        &&: and 연산자라 부르며, 피연산자 중 값이 하나라도 false가 존재하면 false로 결괏값을 반환합니다. 
+        ! : not 연산자라 부르며, 단항 연산자입니다. 피연산자의 값이 true이면 반대로 false로 결괏값을 반환합니다.
+
+        연산자 우선순위
+        1.()
+        2.단항연산자(--,++,!)
+        3.산술연산자(*,/,%,+,-)
+        4.비교 연산자(>,>=,<,<=,==,===,!==,!=)
+        5.논리연산자(&&,||)
+        6.대입(복합 대입)연산자(=,+=,-=,*=,/=,%=)
+        */
+        var a=10;
+        var b=20;
+        var m=30;
+        var n=40;
+
+        var result;
+
+        result = a > b || b >= m||m > n;
+        document.write(result,"<br>");
+
+        result = a> b || b >= m || m <= n;
+        document.write(result,"<br>");
+
+        result = a <= b && b >= m && m <= n;
+        document.write(result,"<br>");
+
+        result = a <= b && b <= m && m <= n;
+        document.write(result,"<br>");
+
+        result=!(a > b);
+        document.write(result,"<br>");
+        
+
+    </script>
+</body>
+</html>
