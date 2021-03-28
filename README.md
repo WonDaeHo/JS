@@ -11,5 +11,5 @@
 - 세부 주제 1 작성
 - 세부 주제 2 작성
 
-[study1JS](StudyJS2.html)
+[study2JS(실습파일)](StudyJS2.html)
 
