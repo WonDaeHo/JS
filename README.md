@@ -4,8 +4,7 @@
 ### [1주차] : 기초문법
 - study1 : 
 - 세부 주제 2 작성
-
-[WEEK01](https://github.com/limeunseop/TIL-Template/blob/master/WEEK01.md) : 1주차
+study1JS(#study1JS.js)
 
 ---------------------------------------
 ### [2주차] : 간략 주제 작성
