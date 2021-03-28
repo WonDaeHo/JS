@@ -11,5 +11,5 @@
 - 세부 주제 1 작성
 - 세부 주제 2 작성
 
-[WEEK02](https://github.com/limeunseop/TIL-Template/blob/master/WEEK02.md) : 2주차
+[study1JS](StudyJS2.html)
 
