@@ -4,7 +4,7 @@
 - [CSS](CSS.md)
 - [javascript](JS.md)  
 - [Jquary](Jquary.md)
-- [Bootstarp](Bootstarp.md)
+- [Bootstarp](BootStarp.md)
 - [React](react.md)
 
 --------------------------------------------------
