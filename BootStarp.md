@@ -1,4 +1,4 @@
-# BootstrapCDN
+# BootstrapCDN 07.05
 ## CSS
 ```
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -20,3 +20,11 @@
 ```
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 ```
+## 박스크기
+```
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+```
+
+
