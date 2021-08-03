@@ -264,6 +264,24 @@ render() {
 }
 export default App;
 ```
+src/Counter/js
+```javascript
+import React, { Component } from 'react';
+//Counter 컴포넌트를 생성하고 Component를 상속
+class Counter extends Component {
+	render() {
+    return (
+    <div>
+        <h1>Counter</h1>
+        <div>값: {this.props.number}</div>
+        <button onClick={this.props.handleIncrease}>+</button>
+    </div>
+    );
+	}
+}
+export default Counter;
+```
+state에 값을 변경할 때는, this.setState()메서드를 사용한다.
 
 
 
