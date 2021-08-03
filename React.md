@@ -189,7 +189,81 @@ return (
 ## props
 부모 컴포넌트로부터 자식컴포넌트가 물려받는 속성, 다시말해 props를 이용해서 부모 컴포넌트가 자식 컴포논트에 데이터를 전달.
 
+부모에게서 받아온 props는 자식 컴포넌트에 데이터를 전달합니다.
 
+부모에게서 받아온 props는 자식에서 수정이 불가능하다. 이유는 단방향 데이터 흐름으로 강제로 정해져 있다.
+
+src/App.js
+App.js에서 자식 컴포넌트인 Hello 컴포넌트에게 보낼 속성을 정의.
+```javascript
+import React, { Component } from 'react';
+import Hello from './hello.js';
+class App extends Component {
+    render() {
+        return (
+            <div className="App">
+                <Hello text="React"/> //정의
+            </div>
+        );
+    }
+}
+export default App;
+```
+src/hello.js
+hello.js에서 부모컴포넌트에서 받은 props를 호출합니다.
+```javascript
+class Hello extends Component {
+    render() {
+        return (
+        <div>
+            <p>
+              Hello {this.props.text} //정의 된 props호출
+            </p>
+        </div>
+        );
+    }
+}
+```
+## State
+State는 컴포넌트 내에서 동적으로 변동되는 데이터를 관리하며, 언제나 기본 값을 미리 설정해야 사용할 수 있다.
+
+버튼클릭으로 숫자가 증가하는 예제
+
+```javascript
+import React, { Component } from 'react';
+import './App.css';
+import Counter from './Counter.js'// 카운터를 표시해줄 컴포넌트 호출
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            number: 0
+        };
+    }
+//함수 실행시 number값이 1 증가
+    handleIncrease = () => {
+      const { number } = this.state;
+//this.setState는 state의 값을 변경할 때 사용 하는 함수
+      this.setState({
+        number: number + 1
+      });
+    }
+render() {
+        return (
+          <div className="App">
+            <header className="App-header">
+                <img src={logo} className="App-logo" alt="logo" />
+                <Counter 
+                   handleIncrease={this.handleIncrease}
+                   number={this.state.number}
+                />
+            </header>
+          </div>
+        );
+    }
+}
+export default App;
+```
 
 
 
