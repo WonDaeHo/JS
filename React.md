@@ -325,7 +325,7 @@ componentWillUnmount()
 ```
 componentWillUnmount() : 컴포넌트가 소멸된 시점에 (DOM에서 삭제된 후)실행되는 메소드, 컴포넌트 내부에서 타이머나 비동기 API를 사용하고 있을 때, 이를 제거하기에 유용하다.
 
-## 조건부 렌더링
+# 조건부 렌더링
 
 APP.js
 ```javascript
@@ -367,4 +367,103 @@ export default Hello;
 isSpecial값이 true라면 <b>*</b>를, 그렇지 않다면 null을 보여준다.
 JSX에서 null, false, undefind를 렌더링 하게 된다면 아무것도 나타나지 않게 된다.
 
+# useState
+Hook기능
+App.js
+```javascript
+import React from 'react';
+import Counter from './Counter';
+
+function App() {
+  return (
+    <Counter />
+  );
+}
+
+export default App;
+```
+Counter.js
+```javascript
+import React, { useState } from 'react';
+
+function Counter() {
+  const [number, setNumber] = useState(0);
+
+  const onIncrease = () => {
+    setNumber(number + 1);
+  }
+
+  const onDecrease = () => {
+    setNumber(number - 1);
+  }
+
+  return (
+    <div>
+      <h1>{number}</h1>
+      <button onClick={onIncrease}>+1</button>
+      <button onClick={onDecrease}>-1</button>
+    </div>
+  );
+}
+
+export default Counter;
+```
+
+useState불러오기
+```
+import React, { useState } from 'react';
+```
+
+useState를 사용 할 때에는 상태의 기본값을 파라미터로 넣어서 호출.
+이 함수를 호출하면 배열이 반환됨. 첫번째 원소는 현재상태, 두번째 원소는 Setter 함수.
+
+```
+const [number, setNumber] = useState(0);
+```
+
+# input상태 관리하기
+
+APP.js
+```javacript
+//리엑트와 InputSample.js와 연결시킨다.
+import React from "react";
+import InputSample from "./inputSample";
+//App함수 안에 함수 InputSample을 호출한다.
+function App(){
+    return (
+      <InputSample/>
+    );
+}
+//다른 곳에서도 사용할 수 있도록 내보내고 마무리
+export default App;
+
+```
+InputSample.js
+```javascrips
+//리엑트 라이브러리와 useState 호출
+import React, {useState} from "react";
+
+//Input 함수정의
+function InputSample(){
+    //
+    const  [text, setText] = useState('');
+    const onchange = (e) =>{
+        setText(e.target.value);
+    };
+    const onreset = () => {
+        setText('');
+    };
+    return(
+        <div>
+            <input onChange={onchange} value={text} />
+            <button onClick={onreset}>reset</button>
+            <div>
+                <b>값: {text}</b>
+            </div>
+        </div>
+    );
+}
+export default  InputSample;
+
+```
 
