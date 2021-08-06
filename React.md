@@ -325,4 +325,46 @@ componentWillUnmount()
 ```
 componentWillUnmount() : 컴포넌트가 소멸된 시점에 (DOM에서 삭제된 후)실행되는 메소드, 컴포넌트 내부에서 타이머나 비동기 API를 사용하고 있을 때, 이를 제거하기에 유용하다.
 
+## 조건부 렌더링
+
+APP.js
+```javascript
+import React from 'react';
+import Hello from './Hello';
+import Wrapper from './Wrapper';
+
+
+function App() {
+  return (
+    <Wrapper>
+      <Hello name="react" color="red" isSpecial={true}/>
+      <Hello color="pink" />
+    </Wrapper>
+  )
+}
+
+export default App;
+```
+Hello.js
+```javascript
+import React from 'react';
+
+function Hello({ color, name, isSpecial }) {
+  return (
+    <div style={{ color }}>
+      { isSpecial ? <b>*</b> : null }
+      안녕하세요 {name}
+    </div>
+  );
+}
+
+Hello.defaultProps = {
+  name: '이름없음'
+}
+
+export default Hello;
+```
+isSpecial값이 true라면 <b>*</b>를, 그렇지 않다면 null을 보여준다.
+JSX에서 null, false, undefind를 렌더링 하게 된다면 아무것도 나타나지 않게 된다.
+
 
