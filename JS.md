@@ -12,7 +12,18 @@
 <details markdown="1">
 <summary>접기/펼치기</summary>
 
-<!--summary 아래 빈칸 공백 두고 내용을 적는공간-->
+forEach
+```javasctipt
+const a =[1,2,3,4,5];
+for(let i = 0; i < a.length; i++){
+  console.log(a[i];)
+}
+
+const a = [1,2,3,4,5];
+a.forEach( (n) =>{
+console.log(n);
+});
+```
 
 </details>
 
