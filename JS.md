@@ -42,7 +42,9 @@ console.log(a);
 ```
 
 </details>
+
 -------------------------------------------------
+
 # EC6
 <details markdown="1">
 <summary>접기/펼치기</summary>
