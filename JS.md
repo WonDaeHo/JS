@@ -45,9 +45,8 @@ console.log(a);
 
 -------------------------------------------------
 
-# EC6
 <details markdown="1">
-<summary>접기/펼치기</summary>
+# <summary>ES6</summary>
 
 super의 사용이유?
 상속을 받게 됐을 때 자식 클래스에서 새로운 요소를 추가할때 super를 사용하면 코드의 재사용을 줄일 수 있다.
