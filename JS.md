@@ -7,10 +7,9 @@
 - [객체](객체.md)
 - [함수](함수.md)
 ---------------------------------------
-# 배열 내장 함수
 
 <details markdown="1">
-<summary>접기/펼치기</summary>
+# <summary>배열 내장함수</summary>
 
 forEach
 ```javascript
@@ -61,5 +60,61 @@ super의 2가지 용법
 -> 부모의 인자를 상속받은 자식 객체에서 무언가 새로운 함수 등을 추가하고 싶을 때, 일일이 부모 인자의 메소드 값을 동일하게 입력한 뒤 새로운 값을 입력해주어야 한다. 이것은 매우 지저분한 코드를 만들게 함은 물론, 코드의 반복이 자주 일어나므로 좋지 않은 코드라고 할 수 있다. 따라서 super를 이용해주면 아주 손쉽게 부모의 메소드 혹은 객체를 이어받되, 새로운 값을 추가해줄 수 있는 것이다.
   
 </details>
+
+--------------------------------------------------
+
+<details markdown="1">
+# <summary>삼항연산자</summary>
+
+사용법
+```
+조건 ? true : false
+```
+
+ex)
+```javascript
+const array = [1,2,3];
+let text = array.length === 0 
+  ? '배열이 비어있습니다' 
+  : '배열이 비어있지 않습니다.';
+console.log(text);
+```
+
+</details>
+
+------------------------------------------------------
+
+<details markdown="1">
+# <summary>파라미터</summary>
+
+const calculateCircleArea = (r = 1) => Math.PI * r * r;
+
+const area = calculateCircleArea();
+console.log(area); // 3.141592653589793
+
+</details>
+
+-------------------------------------------------------
+
+<details markdown="1">
+# <summary>조건문 스킬</summary>
+
+- 특정 값이 여러 값중 하나인지 확인해야할 때
+  
+  ```javascript
+  const a = name => [1, 2, 3, 4].includes(name);
+
+  console.log(isAnimal(1)); // true
+  console.log(isAnimal(6)); // false
+  ```
+  
+- 값에 따라 다른 결과물을 반환 해야 할 때
+  
+  ```javascript
+  
+  ```
+
+</details>
+
 
 
