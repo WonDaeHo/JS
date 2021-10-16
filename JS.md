@@ -116,5 +116,19 @@ console.log(area); // 3.141592653589793
 
 </details>
 
+-------------------------------------------------------
+
+<details markdown="1">
+# <summary>Scope</summary>
+
+- GlobalScope:
+  코드의 모든 범위에서 사용가능.
+- FunctionScope:
+  함수 안에서만 사용가능.
+- BlockScope:
+  if, for, switch등 특정 블록 내부에서만 사용이 가능.
+
+</details>
+
 
 
